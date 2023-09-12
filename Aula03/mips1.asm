@@ -10,6 +10,13 @@ li $t1, 5
 li $t2, 4
 add $t3, $t1, $t2
 
+li $v0, 1 #Imprimindo um INT
+move $a0, $t2
+syscall
+
+li $v0, 5 #Imprimindo um INT
+syscall
+
 
 # X = 10 + 125 ---> Tipo I
 # A = 10 ---> $s0

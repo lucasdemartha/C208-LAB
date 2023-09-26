@@ -6,7 +6,7 @@ li $t2, 1 #c
 
 #1 a==b
 
-beq $t0, $t1, ELSE1
+bne $t0, $t1, ELSE1
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END1
@@ -17,7 +17,7 @@ END1:
 
 #2 a!=b
 
-bne $t0, $t1, ELSE2
+beq $t0, $t1, ELSE2
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END2
@@ -27,7 +27,7 @@ ELSE2:
 END2:
 
 #3 a>b
-bgt $t0, $t1, ELSE3
+blt $t0, $t1, ELSE3
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END3
@@ -37,7 +37,7 @@ ELSE3:
 END3:
 
 #4 a<b
-blt $t0, $t1, ELSE4
+bgt $t0, $t1, ELSE4
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END4

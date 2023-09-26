@@ -27,7 +27,7 @@ ELSE2:
 END2:
 
 #3 a>b
-bge $t0, $t1, ELSE3
+bgt $t0, $t1, ELSE3
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END3
@@ -37,7 +37,7 @@ ELSE3:
 END3:
 
 #4 a<b
-ble $t0, $t1, ELSE4
+blt $t0, $t1, ELSE4
 	add $t2, $t0, $t1
 	sub $t0, $t1, $t2
 	j END4
@@ -53,7 +53,7 @@ li $t4, 0
 WHILE:
 	beqz $t3, EXIT
 	addi $t4, $t4, 5
-	subi $t3, $t3, 1
+	subi $t3, $t3, 2
 	j WHILE
 EXIT:
 
